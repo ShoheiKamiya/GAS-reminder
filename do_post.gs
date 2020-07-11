@@ -17,3 +17,12 @@ function doPost(e) {
   };
   UrlFetchApp.fetch(payload.response_url, options);
 }
+
+function updateBlocks(blocks, user, action_id) {
+  for (let i in blocks) {
+    if (('accessory' in blocks[i]) && (blocks[i].accessory.action_id === action_id)) {
+      blocks[i] = doneSection(blocks[i].accessory.value);
+    }
+  }
+  return blocks
+}
