@@ -21,18 +21,14 @@ function doPost(e) {
 function updateBlocks(blocks, user, action_id) {
   for (let i in blocks) {
     if (('accessory' in blocks[i]) && (blocks[i].accessory.action_id === action_id)) {
-      blocks[i] = doneSection(blocks[i].accessory.value);
+      blocks[i] = {
+        "type": "section",
+        "text": {
+          "type": "mrkdwn",
+          "text": "掃除完了:+1: *" + blocks[i].accessory.value + "*"
+        }
+      }
     }
   }
   return blocks
-}
-
-function doneSection(value) {
-  return {
-    "type": "section",
-    "text": {
-      "type": "mrkdwn",
-      "text": "掃除完了:+1: *" + value + "*"
-    }
-  }
 }
