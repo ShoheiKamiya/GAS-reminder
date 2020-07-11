@@ -26,3 +26,13 @@ function updateBlocks(blocks, user, action_id) {
   }
   return blocks
 }
+
+function doneSection(value) {
+  return {
+    "type": "section",
+    "text": {
+      "type": "mrkdwn",
+      "text": "掃除完了:+1: *" + value + "*"
+    }
+  }
+}
