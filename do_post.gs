@@ -21,7 +21,6 @@ function doPost(e) {
   
   updateStatus(sheet, id, column, true) // TODO: エラーハンドリング カラムが見つからない場合を考慮する
 
-  const blocks = updateBlocks(payload.message.blocks, payload.user.name, payload.actions[0].action_id);
   const options = {
     "method": "post",
     "payload": JSON.stringify({ "blocks": blocks })
