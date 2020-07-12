@@ -1,4 +1,4 @@
-function debug(value) {
+function debugMessage(value) {
   const url = PropertiesService.getScriptProperties().getProperty("SLACK_WEBHOOK_URL");
   const options = {
     "method": "post",
