@@ -36,6 +36,14 @@ function updateBlocks(blocks, user, action_id, member, room) {
         "text": {
           "type": "mrkdwn",
            "text": "掃除完了:+1: *" + room + " by " + member + "*"
+        },
+        "accessory": {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "キャンセル",
+          },
+          "value": "hogeeeeeeee"
         }
       }
     }
