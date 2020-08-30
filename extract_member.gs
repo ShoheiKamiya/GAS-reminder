@@ -7,14 +7,13 @@ function extractMembers(sheet, day) {
   })
     
   const date = new Date();
-  const dateString = dateFormat.format(date, "yyyy-MMdd")
+  const dateString = dateFormat.format(date, "yyyy-MM-dd")
   
   const hoge = theDayColumnIndex(sheet, dateString)
   
   const incompleted = responsible.filter(member => {
     return !member[hoge]})
  
-  console.log(incompleted)
   return incompleted
   
 }
